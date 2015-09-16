@@ -28,6 +28,11 @@ describe AddressBook do
     @book.entries.should_not include(@alice)
   end
 
+  it "raises an error when removing something that does't exist" do
+    lambda { @book.remove(@alice) }.should raise_error(AddressBook::InvalidEntry)
+    @book.entries.should_not include(@alice)
+  end
+
   it "can export" do
     @alice.zip = '10001'
     @alice.email = 'alice@example.com'
