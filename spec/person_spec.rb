@@ -11,15 +11,4 @@ describe Person do
     person.email = "bob@example.com"
     person.email.should == "bob@example.com"
   end
-
-  # def test_weather
-#     person = Person.new("Bob")
-#     person.zip = '10001'
-#     assert_not_nil person.weather
-#   end
-#
-#   def test_weather_without_zip
-#     person = Person.new("Bob")
-#     assert_equal "Unknown", person.weather
-#   end
 end
